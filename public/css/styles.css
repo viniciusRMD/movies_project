@@ -1,0 +1,300 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    
+}
+
+#quick-search-container input{
+    width: 250px;
+    height: 35px;
+    font-size: .85em;
+    font-weight: bold;
+    color: #919191;
+    border: 2px solid #333;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    padding: 4px 30px;
+    background: #1d1d1d url(../images/website/icon-search.svg) no-repeat 9px 8px;
+}
+#quick-search-container input:focus{
+    outline: unset;
+
+  
+}
+
+#bk{
+    position: absolute;
+    background: url(https://img.yts.mx/assets/images/movies/the_wandering_earth_ii_2023/background.jpg) no-repeat center center;background-size: cover;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;
+    width: 100%;
+    min-height: 580px;
+    top: 80px;
+}
+#over{
+    position: absolute;
+    width: 100%;
+    min-height: 580px;
+    top: 80px;
+    background: linear-gradient(to bottom,rgba(29,29,29,0.65) 0,rgba(29,29,29,1) 100%);
+}
+
+body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    background: #1d1d1d;
+    overflow: visible;
+}   
+header{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    align-items: center;
+    padding: 0 27px;
+    justify-content: space-between;
+    z-index: 8;
+    background: #1d1d1d;
+    overflow: hidden;
+    color: #919191;
+    border-bottom: 1px solid #2f2f2f;
+}
+header h1{
+    font-size: 2rem;
+}
+header a{
+    position: relative;
+    display: flex;
+    color: whitesmoke;
+    text-decoration: none;
+    height: 10px;
+}
+
+header .navigation{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+.navigation li{
+    list-style: none;
+    margin: 0 20px;
+}
+.navigation li a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: aliceblue;
+    transition: 0.3s;
+}
+.navigation li a:hover{
+    color: #1867cc;
+    transition: 0.3s;
+}
+
+.container{
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container .card:hover{
+    transform: scale(1.1);
+}
+.container .card{
+    position: relative;
+    width: 270px;
+    height: 420px;
+    background-color: #FFF;
+    border: 1px solid #72c6f2;
+    margin: 16px;
+    border-radius: 6px;
+    overflow: hidden;
+    
+    transition: 0.5s;
+    color: whitesmoke;
+}
+
+.container .card h2{
+    position: relative;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 7px;
+    padding-right: 7px;
+    height: 50px;
+    font-weight: 400;
+    text-align: center;
+    background: #1867cc;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #d3d3d3;
+}
+.container .card .content .info{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    text-align: start;
+    align-items: center;
+    padding: 0px;
+    background: #FFF;
+    color: #000;
+}
+.container .card .content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    page-break-after: 20px;
+    text-align: center;
+}
+.container .card .content p{
+    font-size: 1.2em;
+    color: #747E7E;
+}
+.container .card .link{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.container .card .link a{
+    position: absolute;
+    display: flex;
+    bottom: 10px;
+    padding: 10px 20px;
+    background: #1866cccc;
+    color: whitesmoke;
+    border-radius: 40px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+   
+}
+.container .card span{
+    position: absolute;
+    color: #c4c4c4;
+    padding: 5px;
+    z-index: 1000;
+    background-color: #10101186;
+}
+
+.container .card .content img{
+    position: relative;
+    max-height: 410px;
+}
+.cover{
+    position: absolute;
+    text-align: center;
+    width: 70vw;
+    height: 60vh;
+    border-radius: 6px;
+    background-size: cover;
+    background: rgba(1,1,1,0.5);
+    transition: 6s;
+    justify-content: center;
+    display: none;
+    z-index: 0;
+    transition: 0.6s;
+}
+
+    
+
+.cover.active{
+    overflow: hidden;
+    display: flex;
+    z-index: 1000;
+    transition: 6s;
+    column-fill: balance;
+    transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+   
+}
+#ads{
+    position: relative;
+    width: 200px;
+    height: 800px;
+    margin: 10px;
+    padding: 0 -100px 0px;
+    background: #C9FFFE;
+}
+.info {
+    position: absolute;
+    background-color: #10101186;
+    border: aqua solid 2px;
+    z-index: 1000;
+    width: 80%;
+    color: whitesmoke;
+    box-shadow: 3px 10px 6px black;
+    border-radius: 6px;
+    padding: 7px;
+}
+@media (max-width: 991px){
+
+    header .navigation{
+        display: none;
+    }
+    header{
+        height: 80px;
+        font-size: 12px;
+        padding: 15px 20px;
+    }
+    .info{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        padding: 3px;
+        width: 100%;
+    }
+    .info img{
+        height: 250px;
+    }
+
+}
+
+
+.info div {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.info span {
+    font-weight: 500;
+}
+.info a {
+    text-decoration: none;
+}
+.info h2 {
+    padding: 10px;
+}
+.dl{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 68px;
+    padding-top: 20px;
+    line-height: 1.8;
+    font-size: 14px;
+}
+.dl img {
+    width: 135px;
+}
+.dl p span strong{
+    font-weight: 600;
+}
+
+dialog {
+    position: fixed;
+    margin: auto;
+    border: none;
+    background: transparent;
+    bottom: 20px;
+}
